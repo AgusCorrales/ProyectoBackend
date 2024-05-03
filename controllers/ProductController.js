@@ -1,6 +1,5 @@
-const { where } = require("sequelize");
 const {Product, Category} = require("../models/index.js");
-const { param } = require("../routes/products.js");
+
 
 
 const ProductController = {

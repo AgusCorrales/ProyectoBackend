@@ -19,10 +19,10 @@ const CategoryController = {
             }
         })
         .then(category =>res.status(200).send({msg:"Categoria actualizado correctamente", category}))
-        .catch(err => {
-            console.log(err)
-            res.status(500).send({msg: "Problemas al actualizar categoria"})
-        })
+            .catch(err => {
+                console.log(err)
+                res.status(500).send({msg: "Problemas al actualizar categoria"})
+            })
     },
     delete (req,res){
         Category.destroy({
