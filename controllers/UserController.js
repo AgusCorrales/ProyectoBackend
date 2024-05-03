@@ -1,10 +1,8 @@
-//const { request } = require("express");
-const {User, Token} = require ("../models/index.js");
+const {User, Token, Sequelize} = require ("../models/index.js");
 const bcrypt = require ("bcryptjs");
 const jwt = require ("jsonwebtoken");
-const { use } = require("../routes/products.js");
 const {jwt_secret} = require ("../config/config.json")["development"];
-//const { getAll } = require("./ProductController.js");
+const {Op} = Sequelize
 
 const UserController = {
     create (req,res){
@@ -46,8 +44,35 @@ const UserController = {
           });
     
     },
-    
-    
+    delete (req,res){
+        User.destroy({
+            where:{
+                id: req.params.id
+            }
+        })
+        .then(product=>res.status(200).send({mesg:"Usuario borrado",product}))
+        .catch(err => {
+            console.log(err)
+            res.status(500).send({msg: "Problemas al borrar el usuario"})
+        })
+    },
+    logout(req,res){
+        Token.destroy({
+            where: {
+                [Op.and]: [
+                    { UserId: req.user.id },
+                    { token: req.headers.authorization }
+                ]
+            }
+        })
+        .then(() => {
+            res.send({ message: 'Desconectado con éxito' });
+        })
+        .catch(error => {
+            console.log(error);
+            res.status(500).send({ message: 'Hubo un problema al tratar de desconectarte' });
+        });
+    }
 
 
 }
