@@ -1,18 +1,19 @@
-const {User, Token, Sequelize} = require ("../models/index.js");
+const {User, Token, Order,Product,Sequelize} = require ("../models/index.js");
 const bcrypt = require ("bcryptjs");
 const jwt = require ("jsonwebtoken");
+const { where } = require("sequelize");
 const {jwt_secret} = require ("../config/config.json")["development"];
 const {Op} = Sequelize
 
 const UserController = {
-    create (req,res){
+    create (req,res,next){
         req.body.role = "user";
         const password = bcrypt.hashSync(req.body.password,10)     
         User.create({...req.body,password:password})
         .then(user => res.status(201).send({ msg: 'Usuario creado con éxito', user }))
         .catch(err => {
             console.log(err)
-            res.status(500).send({msg: "Problemas al crear el usuario"})
+            next(err)
         })
     },
     login(req,res){
@@ -72,6 +73,24 @@ const UserController = {
             console.log(error);
             res.status(500).send({ message: 'Hubo un problema al tratar de desconectarte' });
         });
+    },
+    findOne(req,res){
+        User.findByPk(
+                 req.user.id,{
+                include: [
+                    {
+                        model: Order,
+                        include: [{model: Product}],
+                    },
+                ],})
+            .then(user=>{
+                res.send({ msg: "Usuario con su pedido", user });
+            })
+            .catch(error => {
+                console.log(error);
+                res.status(500).send({ message: "Hubo un problema cargar los usuarios"});
+            });
+        
     }
 
 

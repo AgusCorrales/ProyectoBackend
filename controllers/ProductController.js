@@ -3,7 +3,7 @@ const {Product, Category} = require("../models/index.js");
 
 
 const ProductController = {
-    create (req,res){
+    create (req,res,next){
         Product.create(req.body)
         .then(product => {
             product.addCategory(req.body.CategoryId)
@@ -11,7 +11,7 @@ const ProductController = {
         })    
         .catch(err => {
             console.log(err)
-            res.status(500).send({msg: "Problemas al añadir el producto"})
+            next(err)
         })
     },
     update (req,res){
