@@ -30,14 +30,19 @@ Importa los controladores necesarios en tu aplicación:
 ## Controlador de Usuario
 Proporciona funciones para la gestión de usuarios en la aplicación, incluyendo la creación, autenticación, obtención, eliminación y desconexión de usuarios.
 
+
 ## Controlador de Categoría
 Gestiona las categorías de productos en la aplicación, permitiendo la creación, actualización, eliminación y obtención de categorías.
+
 
 ## Controlador de Pedido
 Permite la creación de nuevos pedidos en la aplicación, así como la obtención de todos los pedidos existentes.
 
+
 ## Controlador de Producto
 Gestiona los productos disponibles en la aplicación, permitiendo la creación, actualización, eliminación y obtención de productos, así como filtrar por nombre, precio y ordenar por precio de forma descendente.
+
+
 
 
 ## Notas adicionales
