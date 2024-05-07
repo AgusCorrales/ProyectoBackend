@@ -4,9 +4,9 @@ const {Order,Product,User} = require ("../models/index.js");
 const OrderController = {
     create(req, res) {
         Order.create(req.body)
-        .then(product => {
-            product.addCategory(req.body.ProductId)
-            res.status(201).send({msg:"Producto añadido exitosamente", product});
+        .then(order => {
+            order.addProduct(req.body.ProductId)
+            res.status(201).send({msg:"Pedido añadido exitosamente", order});
         }) 
         .catch(err => console.error(err))
     },

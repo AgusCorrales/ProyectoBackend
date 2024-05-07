@@ -30,7 +30,7 @@ const CategoryController = {
                 id: req.params.id
             }
         })
-        .then(product=>res.status(200).send({mesg:"Categoria borrada",product}))
+        .then(product=>res.status(200).send({msg:"Categoria borrada",product}))
         .catch(err => {
             console.log(err)
             res.status(500).send({msg: "Problemas al borrar categoria"})

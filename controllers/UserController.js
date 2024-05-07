@@ -23,11 +23,11 @@ const UserController = {
             }
         }).then(user=>{
             if(!user){
-                return res.status(400).send({message:"Usuario o contraseña incorrectos"})
+                return res.status(400).send({msg:"Usuario o contraseña incorrectos"})
             }
             const isMatch = bcrypt.compareSync(req.body.password, user.password);
             if(!isMatch){
-                return res.status(400).send({message:"Usuario o contraseña incorrectos"})
+                return res.status(400).send({msg:"Usuario o contraseña incorrectos"})
             }
             const token = jwt.sign ({id:user.id}, jwt_secret);
             Token.create ({token,UserId: user.id});
@@ -67,11 +67,11 @@ const UserController = {
             }
         })
         .then(() => {
-            res.send({ message: 'Desconectado con éxito' });
+            res.send({ msg: 'Desconectado con éxito' });
         })
         .catch(error => {
             console.log(error);
-            res.status(500).send({ message: 'Hubo un problema al tratar de desconectarte' });
+            res.status(500).send({ msg: 'Hubo un problema al tratar de desconectarte' });
         });
     },
     findOne(req,res){
@@ -88,7 +88,7 @@ const UserController = {
             })
             .catch(error => {
                 console.log(error);
-                res.status(500).send({ message: "Hubo un problema cargar los usuarios"});
+                res.status(500).send({ msg: "Hubo un problema cargar los usuarios"});
             });
         
     }

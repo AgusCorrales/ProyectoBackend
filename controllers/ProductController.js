@@ -41,7 +41,7 @@ const ProductController = {
                 id: req.params.id
             }
         })
-        .then(product=>res.status(200).send({mesg:"Producto borrado",product}))
+        .then(product=>res.status(200).send({msg:"Producto borrado",product}))
         .catch(err=>console.log(err));
     },
     getById (req,res){
