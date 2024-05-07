@@ -1,4 +1,4 @@
-# Controladores de la Aplicación
+# Tienda Online 
 
 Este módulo contiene varios controladores para la gestión de usuarios, categorías, pedidos y productos en una aplicación. Cada controlador proporciona funciones para realizar operaciones específicas en la base de datos relacionadas con su entidad correspondiente.
 
