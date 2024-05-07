@@ -1,8 +1,8 @@
-# Tienda Online 💻
+# Backend de Tienda Online 💻
 
 Este módulo contiene varios controladores para la gestión de usuarios, categorías, pedidos y productos en una aplicación. Cada controlador proporciona funciones para realizar operaciones específicas en la base de datos relacionadas con su entidad correspondiente.
 
-## Requisitos
+## Dependencias
 
 - Node.js
 - Express.js
@@ -17,15 +17,6 @@ Este módulo contiene varios controladores para la gestión de usuarios, categor
 3. Asegúrate de tener una base de datos configurada y que los detalles de conexión estén actualizados en el archivo `config.json`.
 
 
-## Uso
-
-Importa los controladores necesarios en tu aplicación:
-
-- JavaScript:
-- const UserController = require('./controllers/UserController');
-- const CategoryController = require('./controllers/CategoryController');
-- const OrderController = require('./controllers/OrderController');
-- const ProductController = require('./controllers/ProductController');
 
 ## Controlador de Usuario
 Proporciona funciones para la gestión de usuarios en la aplicación, incluyendo la creación, autenticación, obtención, eliminación y desconexión de usuarios.
