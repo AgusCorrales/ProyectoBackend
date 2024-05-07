@@ -17,9 +17,9 @@ Este módulo contiene varios controladores para la gestión de usuarios, categor
 
 
 ## Relaciones
-- **Users-Orders: Es una relacion de uno a muchos.**
-- **Orders-Products: Es una relacion de muchos a muchos.**
-- **Products-Categories: Es una relacion de muchos a muchos**
+- **Users-Orders:** Es una relacion de uno a muchos.
+- **Orders-Products:** Es una relacion de muchos a muchos.
+- **Products-Categories:** Es una relacion de muchos a muchos
 
 
 ## Instalación
