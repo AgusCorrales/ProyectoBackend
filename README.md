@@ -13,15 +13,19 @@ Este módulo contiene varios controladores para la gestión de usuarios, categor
 
 ## Diagrama
 
-<img width="986" alt="Captura de pantalla 2024-05-07 a la(s) 13 14 36" src="https://github.com/AgusCorrales/ProyectoBackend/assets/162991987/36c8e7f2-ac14-4224-9ea4-82fda883c7f4">
+<img width="908" alt="Captura de pantalla 2024-05-07 a la(s) 13 46 11" src="https://github.com/AgusCorrales/ProyectoBackend/assets/162991987/a04f97fa-f5ea-4f1d-b946-24c80a9399c3">
 
+**RELACIONES:**
+**Users-Orders: Es una relacion de uno a muchos.**
+**Orders-Products: Es una relacion de muchos a muchos.**
+**Products-Categories: Es una relacion de muchos a muchos**
 
 
 ## Instalación
 
 1. Clona este repositorio en tu máquina local.
 2. Instala las dependencias utilizando npm: npm install
-3. Asegúrate de tener una base de datos configurada y que los detalles de conexión estén actualizados en el archivo `config.json`.
+3. Asegúrate de tener una base de datos configurada y que los detalles de conexión estén actualizados en el archivo `config_example.json`.
 
 
 
