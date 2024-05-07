@@ -10,6 +10,13 @@ Este módulo contiene varios controladores para la gestión de usuarios, categor
 - bcryptjs
 - jsonwebtoken
 
+
+## Diagrama
+
+<img width="986" alt="Captura de pantalla 2024-05-07 a la(s) 13 14 36" src="https://github.com/AgusCorrales/ProyectoBackend/assets/162991987/36c8e7f2-ac14-4224-9ea4-82fda883c7f4">
+
+
+
 ## Instalación
 
 1. Clona este repositorio en tu máquina local.
