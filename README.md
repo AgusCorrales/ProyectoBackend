@@ -21,11 +21,11 @@ Este módulo contiene varios controladores para la gestión de usuarios, categor
 
 Importa los controladores necesarios en tu aplicación:
 
-- javascript
-const UserController = require('./controllers/UserController');
-const CategoryController = require('./controllers/CategoryController');
-const OrderController = require('./controllers/OrderController');
-const ProductController = require('./controllers/ProductController');
+- JavaScript:
+- const UserController = require('./controllers/UserController');
+- const CategoryController = require('./controllers/CategoryController');
+- const OrderController = require('./controllers/OrderController');
+- const ProductController = require('./controllers/ProductController');
 
 ## Controlador de Usuario
 Proporciona funciones para la gestión de usuarios en la aplicación, incluyendo la creación, autenticación, obtención, eliminación y desconexión de usuarios.
