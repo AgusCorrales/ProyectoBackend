@@ -15,7 +15,8 @@ Este módulo contiene varios controladores para la gestión de usuarios, categor
 
 <img width="908" alt="Captura de pantalla 2024-05-07 a la(s) 13 46 11" src="https://github.com/AgusCorrales/ProyectoBackend/assets/162991987/a04f97fa-f5ea-4f1d-b946-24c80a9399c3">
 
-**RELACIONES:**
+
+##**RELACIONES:**
 - **Users-Orders: Es una relacion de uno a muchos.**
 - **Orders-Products: Es una relacion de muchos a muchos.**
 - **Products-Categories: Es una relacion de muchos a muchos**
