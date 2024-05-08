@@ -2,7 +2,7 @@
     "development": {
       "username": "root",
       "password": "Tu contaseña",
-      "database": "database_development",
+      "database": "Tu base de datos",
       "host": "127.0.0.1",
       "dialect": "mysql",
       "jwt_secret": "tu secreto"
